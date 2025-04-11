@@ -10,9 +10,8 @@
   ```spl
   index=* sourcetype=linux_audit
 
-
-  ### Splunk Add Data – Review Page
-![Review Page](images/splunk_review_setup.png)
+### Splunk Add Data – Review Page
+![Review Page](Screenshot from 2025-04-10 17-53-30.png)
 
 ### Splunk Search Results – Log Ingestion
 ![Search Results](images/splunk_log_results.png)
