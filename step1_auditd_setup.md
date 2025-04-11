@@ -15,5 +15,4 @@
 ![Review Page](https://raw.githubusercontent.com/HarvyProjects/Splunk-Mitre-Detection-Lab/refs/heads/main/images/Screenshot%20from%202025-04-10%2017-53-30.png?token=GHSAT0AAAAAADCBFSS66ML7HYZF4TDMDGI2Z7YO6LA))
 
 ### Splunk Search Results – Log Ingestion
-![Search Results](file:///home/punjabigoku/Pictures/Screenshots/Screenshot%20from%202025-04-10%2018-01-01.png)
-]
+![Search Results](https://raw.githubusercontent.com/HarvyProjects/Splunk-Mitre-Detection-Lab/refs/heads/main/images/Screenshot%20from%202025-04-10%2018-01-01.png?token=GHSAT0AAAAAADCBFSS6ZOTZPK7U6FY2OC24Z7YOZOA)
