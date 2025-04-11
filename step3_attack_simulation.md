@@ -1,6 +1,14 @@
 ## Step 3 – Simulated Attacks: Brute Force (T1110.001) + HTTP (T1071.001)
 
 
+
+
+
+
+
+
+## MITRE T1110.001 – Brute Force 
+
 ### Objective:
 Simulate a brute force attack on a Linux system and verify that the resulting failed SSH login attempts are captured and ingested into Splunk for detection.
 
@@ -14,16 +22,17 @@ Simulate a brute force attack on a Linux system and verify that the resulting fa
    sudo apt install openssh-server -y
    sudo systemctl enable ssh
    sudo systemctl start ssh
-2. Simulated brute force attack
-3. ```bash
+2. Simulated brute force attack:
+   ```bash
    for i in {1..10}; do ssh fakeuser@localhost; done
-4. Verified logs in Linux terminal
-5. ```bash
-   sudo grep "Failed password" /var/log/auth.log
-6.Added /var/log/auth.log to Splunk
 
-7.Verified in Splunk using:
-### Screenshot – Brute Force Logs in Splunk  
+3. Verified logs in Linux terminal
+    ```bash
+   sudo grep "Failed password" /var/log/auth.log
+4.Added /var/log/auth.log to Splunk
+
+5.Verified in Splunk using the search shown below:
+###  Brute Force Logs in Splunk  
 ![Failed Password Logs](images/failed_password.png)
 
 
