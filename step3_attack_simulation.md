@@ -1,4 +1,5 @@
-## Step 3 – Simulated Brute Force Attack (MITRE T1110.001)
+## Step 3 – Simulated Attacks: Brute Force (T1110.001) + HTTP (T1071.001)
+
 
 ### Objective:
 Simulate a brute force attack on a Linux system and verify that the resulting failed SSH login attempts are captured and ingested into Splunk for detection.
@@ -28,4 +29,33 @@ Simulate a brute force attack on a Linux system and verify that the resulting fa
 
 
 
+## MITRE T1071.001 – Application Layer Protocol (HTTP)
 
+### Objective:
+Simulate HTTP-based command and control behavior using the curl command to trigger logs for detection.
+
+---
+
+
+### What Was Done:
+
+1. Enabled auditd logging for curl:
+   ```bash
+   sudo auditctl -w /usr/bin/curl -p x -k curl-activity
+2. Simulated activity:
+   ```bash
+   curl http://example.com/test
+
+   
+3. Verified logs written to auditd
+   ```bash
+    sudo ausearch -k curl-activity
+   
+4. Confirmed Splunk ingestion
+(run this in Splunk's Search & Reporting app)
+ <pre> ```bash
+    index=* sourcetype=linux_audit "curl  <pre> </pre>
+
+---
+###  Curl Execution in Splunk:
+![Curl Activity](images/curl.png)
