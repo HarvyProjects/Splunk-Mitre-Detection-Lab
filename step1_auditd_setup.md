@@ -16,4 +16,4 @@
 
 ### Splunk Search Results – Log Ingestion
 ![Search Results](file:///home/punjabigoku/Pictures/Screenshots/Screenshot%20from%202025-04-10%2018-01-01.png)
-]\
+]
