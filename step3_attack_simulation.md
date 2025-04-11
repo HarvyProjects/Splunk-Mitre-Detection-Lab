@@ -53,7 +53,7 @@ Simulate HTTP-based command and control behavior using the curl command to trigg
    
 4. Confirmed Splunk ingestion
 (run this in Splunk's Search & Reporting app)
- <pre> ```bash
+ <pre> 
     index=* sourcetype=linux_audit "curl  <pre> </pre>
 
 ---
