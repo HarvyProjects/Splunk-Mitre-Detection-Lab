@@ -1,17 +1,54 @@
-# Step 1 – Auditd Log Ingestion
+# Step 1 – Enabling auditd & Ingesting Logs
+
+## Objective:
+Prepare the Linux system for detection by enabling detailed logging. The goal is to capture both system-level activity (via `auditd`) and authentication attempts (via `auth.log`) and ingest those logs into Splunk for analysis.
+
+---
 
 ## What Was Done:
-- Installed and started `auditd` on Ubuntu
-- Ran test commands to generate logs:
-  - `sudo su`
-  - `cat /etc/shadow`
-- Ingested `/var/log/audit/audit.log` into Splunk via Add Data interface
-- Verified successful ingestion with:
-  ```spl
-  index=* sourcetype=linux_audit![Screenshot from 2025-04-10 18-01-01](https://github.com/user-attachments/assets/f266b4ba-d392-412f-aaed-60ed3a2683c9)
+
+### 1. Enabled `auditd` (Linux Auditing Daemon)
+`auditd` is a native Linux service that records low-level system events. It’s essential for tracking activity like command execution (e.g. `curl`, `ssh`).
 
 
-### Splunk Add Data – Review Page
+
+sudo apt update
+
+sudo apt install auditd audispd-plugins -y
+
+sudo systemctl enable auditd
+
+sudo systemctl start auditd
+
+### 2. Located Key Log Files
+
+    /var/log/audit/audit.log: Logs captured by auditd, used for detecting system-level actions.
+
+    /var/log/auth.log: Captures SSH login attempts, sudo usage, and other authentication events.
+
+These files are critical for both detecting brute force attacks (T1110.001) and HTTP-based command & control via curl (T1071.001).
+
+
+### 3. Ingested Logs into Splunk
+
+Using the Splunk Web UI:
+
+    Add Data > Monitor > File & Directory
+
+    Pointed to:
+
+        /var/log/auth.log
+
+        /var/log/audit/audit.log
+
+    Set the sourcetypes as:
+
+        auth_log for auth logs
+
+        linux_audit for audit logs
+
+
+### Splunk Add Data – Review Page  
 
 This screenshot shows the final review screen during the log ingestion process in Splunk. It confirms that the selected log files (`auth.log` and `audit.log`) are correctly configured for monitoring and ready to be indexed.
 ![Review Page](images/Screenshot%20from%202025-04-10%2017-53-30.png)
