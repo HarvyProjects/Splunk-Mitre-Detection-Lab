@@ -4,11 +4,10 @@ This project simulates and detects adversary behavior using Splunk and maps it t
 
 **Lab Workflow Overview** 
 
-1. Log ingestion from Ubuntu using auditd/Sysmon
-2. Detection of specific MITRE techniques
-3. Query building in Splunk
-4. ATT&CK mapping
-5. Dashboards and visualizations
+Step 1	Enabling auditd & Ingesting Logs
+Step 2	Simulating Brute Force and curl Attacks
+Step 3	Writing SPL Detection Queries
+Step 4	Building a Detection Dashboard
 
 
 **Environment** 
