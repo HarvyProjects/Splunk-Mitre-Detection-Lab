@@ -12,7 +12,6 @@
 
 
 ### Splunk Add Data – Review Page
-![Review Page](https://raw.githubusercontent.com/HarvyProjects/Splunk-Mitre-Detection-Lab/refs/heads/main/images/Screenshot%20from%202025-04-10%2017-53-30.png?token=GHSAT0AAAAAADCBFSS66ML7HYZF4TDMDGI2Z7YO6LA))
-
+![Review Page](images/Screenshot%20from%202025-04-10%2017-53-30.png)
 ### Splunk Search Results – Log Ingestion
-![Search Results](https://raw.githubusercontent.com/HarvyProjects/Splunk-Mitre-Detection-Lab/refs/heads/main/images/Screenshot%20from%202025-04-10%2018-01-01.png?token=GHSAT0AAAAAADCBFSS73DIF22JILO57L2I4Z7YPB2A)
+![Search Results](images/Screenshot%20from%202025-04-10%2018-01-01.png)
