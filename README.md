@@ -4,10 +4,15 @@ This project simulates and detects adversary behavior using Splunk and maps it t
 
 **Lab Workflow Overview** 
 
-Step 1	Enabling auditd & Ingesting Logs
-Step 2	Simulating Brute Force and curl Attacks
-Step 3	Writing SPL Detection Queries
-Step 4	Building a Detection Dashboard
+**Step 1:**	*Enabling auditd & Ingesting Logs*
+
+**Step 2:**	*Simulating Brute Force and curl Attacks*
+
+**Step 3:**	*Writing SPL Detection Queries*
+
+**Step 4:**	*Building a Detection Dashboard*
+
+**Step 5:**  *Creating Alerts* 
 
 
 **Environment** 
