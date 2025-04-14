@@ -8,17 +8,27 @@ Prepare the Linux system for detection by enabling detailed logging. The goal is
 ## What Was Done:
 
 ### 1. Enabled `auditd` (Linux Auditing Daemon)
-`auditd` is a native Linux service that records low-level system events. It’s essential for tracking activity like command execution (e.g. `curl`, `ssh`).
+`auditd` is a built-in Linux service that keeps track of what’s happening behind the scenes, like when someone runs commands such as `curl` or `ssh`. It helps monitor and log system activity for security and troubleshooting.
 
 
+**Bash Commands:**
 
-sudo apt update
+This updates my systems package list to make sure I get the latest version: 
 
-sudo apt install auditd audispd-plugins -y
+`sudo apt update`
 
-sudo systemctl enable auditd
 
-sudo systemctl start auditd
+This command luanhces the install for `auditd` and its plug ins:
+
+`sudo apt install auditd audispd-plugins -y`
+
+This makes it so `auditd` starts automatically every time the system boots:
+
+`sudo systemctl enable auditd`
+
+Starts the service right now:
+
+`sudo systemctl start auditd`
 
 ### 2. Located Key Log Files
 
