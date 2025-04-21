@@ -1,4 +1,4 @@
-###– Brute Force Detection (T1110.001)
+### Brute Force Detection (T1110.001)
 
 This screenshot shows the final configuration of the brute force alert in Splunk. It confirms that the alert is:
 - Enabled and running
